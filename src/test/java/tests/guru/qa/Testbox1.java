@@ -18,6 +18,7 @@ public class Testbox1 {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
+        Configuration.holdBrowserOpen = true;
     }
 
     @Test
@@ -33,8 +34,10 @@ public class Testbox1 {
         $("[id=userEmail]").setValue("kotov@gm.com");
         $("[id=userNumber]").setValue("89103100101");
         $("[id=currentAddress]").setValue("myadress");
+        $("[id=subjectsContainer]").setValue("English").pressEnter();
 
         $("[id=submit]").click();
         $("[id=submit]").click();
+      //  $("[tbody]")
     }
 }
